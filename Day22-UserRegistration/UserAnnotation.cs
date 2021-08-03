@@ -14,6 +14,14 @@ namespace Day22_UserRegistration
         [RegularExpression(@"^[A-Z][a-z]{3,}$", ErrorMessage = "First name is Invalid")]
         [DataType(DataType.Text)]
         public string firstName { get; set; }
+
+        // validation of last name using annotation
+
+        [Required(ErrorMessage = "lastname is required")]
+        [StringLength(50, MinimumLength = 3, ErrorMessage = "Last name should be minimum 3 characters")]
+        [RegularExpression(@"^[A-Z][a-z]{3,}$", ErrorMessage = "last name is Invalid")]
+        [DataType(DataType.Text)]
+        public string lastName { get; set; }
     }
 }
 
