@@ -31,7 +31,7 @@ namespace Day22_UserRegistration
             Console.Write("Enter Phone Number :");
             annotationFields.phoneNum = Console.ReadLine();          //UC4
             Console.Write("Enter Password : ");
-            annotationFields.password = Console.ReadLine();           //UC5
+            annotationFields.password = Console.ReadLine();           //UC5-8
 
 
             ValidateUserAnnotationFields();
