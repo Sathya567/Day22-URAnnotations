@@ -37,6 +37,15 @@ namespace Day22_UserRegistration
         [RegularExpression(@"^[1-9]{2}[ ][0-9]{10}$", ErrorMessage = "Phone Number is invalid")]
         [Phone]
         public string phoneNum { get; set; }
+
+        // validation of password using annotation
+
+        [Required(ErrorMessage = "password is required")]
+        [RegularExpression(@"^([a-zA-Z0-9])*[!@#$%^&*]{1}([a-zA-Z0-9])*$", ErrorMessage = "Passsword is invalid")]
+        [DataType(DataType.Password)]
+        public string password { get; set; }
+
+
     }
 }
 
