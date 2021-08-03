@@ -29,6 +29,14 @@ namespace Day22_UserRegistration
         [RegularExpression(@"^[A-Z0-9a-z]{1,}([.#$^][A-Za-z0-9]+)?[@][A-Za-z]{2,}[.][A-Za-z]{2,3}([.][a-zA-Z]{2})?$", ErrorMessage = "Email id is invalid")]
         [DataType(DataType.EmailAddress)]
         public string emailId { get; set; }
+
+        // validation of phone number using annotation
+
+        [Required(ErrorMessage = "phone number is required")]
+        [DataType(DataType.PhoneNumber)]
+        [RegularExpression(@"^[1-9]{2}[ ][0-9]{10}$", ErrorMessage = "Phone Number is invalid")]
+        [Phone]
+        public string phoneNum { get; set; }
     }
 }
 
